@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.metasdlproj.model.metaSDLProj.impl.StateImpl#getNextstate <em>Nextstate</em>}</li>
  *   <li>{@link com.metasdlproj.model.metaSDLProj.impl.StateImpl#getInput <em>Input</em>}</li>
  *   <li>{@link com.metasdlproj.model.metaSDLProj.impl.StateImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link com.metasdlproj.model.metaSDLProj.impl.StateImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +60,26 @@ public class StateImpl extends NamedElementImpl implements State {
 	 * @ordered
 	 */
 	protected Signal output;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -223,6 +244,28 @@ public class StateImpl extends NamedElementImpl implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MetaSDLProjPackage.STATE__DESCRIPTION, oldDescription,
+					description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -250,6 +293,8 @@ public class StateImpl extends NamedElementImpl implements State {
 			return getInput();
 		case MetaSDLProjPackage.STATE__OUTPUT:
 			return getOutput();
+		case MetaSDLProjPackage.STATE__DESCRIPTION:
+			return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -270,6 +315,9 @@ public class StateImpl extends NamedElementImpl implements State {
 			return;
 		case MetaSDLProjPackage.STATE__OUTPUT:
 			setOutput((Signal) newValue);
+			return;
+		case MetaSDLProjPackage.STATE__DESCRIPTION:
+			setDescription((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -292,6 +340,9 @@ public class StateImpl extends NamedElementImpl implements State {
 		case MetaSDLProjPackage.STATE__OUTPUT:
 			setOutput((Signal) null);
 			return;
+		case MetaSDLProjPackage.STATE__DESCRIPTION:
+			setDescription(DESCRIPTION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -310,8 +361,27 @@ public class StateImpl extends NamedElementImpl implements State {
 			return input != null;
 		case MetaSDLProjPackage.STATE__OUTPUT:
 			return output != null;
+		case MetaSDLProjPackage.STATE__DESCRIPTION:
+			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
 	}
 
 } //StateImpl

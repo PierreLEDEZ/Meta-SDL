@@ -15,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -48,6 +49,7 @@ public class StateItemProvider extends NamedElementItemProvider {
 			addNextstatePropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 			addOutputPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,6 +95,22 @@ public class StateItemProvider extends NamedElementItemProvider {
 						getResourceLocator(), getString("_UI_State_output_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_State_output_feature", "_UI_State_type"),
 						MetaSDLProjPackage.Literals.STATE__OUTPUT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_State_description_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_State_description_feature",
+								"_UI_State_type"),
+						MetaSDLProjPackage.Literals.STATE__DESCRIPTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -172,6 +190,9 @@ public class StateItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(State.class)) {
+		case MetaSDLProjPackage.STATE__DESCRIPTION:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case MetaSDLProjPackage.STATE__INPUT:
 		case MetaSDLProjPackage.STATE__OUTPUT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));

@@ -1,5 +1,8 @@
 package com.metasdlproj.usingmodel;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
@@ -24,11 +27,21 @@ public class SDLModelLoader {
 	
 	public System loadModel(String fileName) {
 		URI uri = URI.createFileURI(fileName);
-		
 		Resource resource = domain.loadResource(uri.toString());
-		
 		System sys = (System) resource.getContents().get(0);
 		return sys;
-		
+	}
+	
+	public void saveHTML(String html, String fileName) throws IOException {
+		File htmlFile = new File(fileName);
+		if (htmlFile.createNewFile()) {
+			java.lang.System.out.println("File created succesfully");
+		} else {
+			java.lang.System.out.println("File already exists");
+		}
+		FileWriter htmlWriter = new FileWriter(fileName);
+		htmlWriter.write(html);
+		htmlWriter.close();
+		java.lang.System.out.println("Successfully wrote to the file");
 	}
 }

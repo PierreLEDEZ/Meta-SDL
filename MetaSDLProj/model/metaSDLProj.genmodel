@@ -31,6 +31,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference metaSDLProj.ecore#//State/nextstate"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metaSDLProj.ecore#//State/input"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metaSDLProj.ecore#//State/output"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metaSDLProj.ecore#//State/description"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

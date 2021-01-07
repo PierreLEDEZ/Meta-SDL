@@ -351,13 +351,22 @@ public interface MetaSDLProjPackage extends EPackage {
 	int STATE__OUTPUT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__DESCRIPTION = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int STATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -550,6 +559,17 @@ public interface MetaSDLProjPackage extends EPackage {
 	EReference getState_Output();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.metasdlproj.model.metaSDLProj.State#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see com.metasdlproj.model.metaSDLProj.State#getDescription()
+	 * @see #getState()
+	 * @generated
+	 */
+	EAttribute getState_Description();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -719,6 +739,14 @@ public interface MetaSDLProjPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STATE__OUTPUT = eINSTANCE.getState_Output();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATE__DESCRIPTION = eINSTANCE.getState_Description();
 
 	}
 

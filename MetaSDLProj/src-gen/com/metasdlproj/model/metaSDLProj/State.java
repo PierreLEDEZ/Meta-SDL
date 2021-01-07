@@ -14,6 +14,7 @@ package com.metasdlproj.model.metaSDLProj;
  *   <li>{@link com.metasdlproj.model.metaSDLProj.State#getNextstate <em>Nextstate</em>}</li>
  *   <li>{@link com.metasdlproj.model.metaSDLProj.State#getInput <em>Input</em>}</li>
  *   <li>{@link com.metasdlproj.model.metaSDLProj.State#getOutput <em>Output</em>}</li>
+ *   <li>{@link com.metasdlproj.model.metaSDLProj.State#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see com.metasdlproj.model.metaSDLProj.MetaSDLProjPackage#getState()
@@ -86,5 +87,27 @@ public interface State extends NamedElement {
 	 * @generated
 	 */
 	void setOutput(Signal value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see com.metasdlproj.model.metaSDLProj.MetaSDLProjPackage#getState_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link com.metasdlproj.model.metaSDLProj.State#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // State

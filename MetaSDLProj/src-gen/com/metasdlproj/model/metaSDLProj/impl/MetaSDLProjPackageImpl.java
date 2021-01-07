@@ -287,6 +287,15 @@ public class MetaSDLProjPackageImpl extends EPackageImpl implements MetaSDLProjP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getState_Description() {
+		return (EAttribute) stateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MetaSDLProjFactory getMetaSDLProjFactory() {
 		return (MetaSDLProjFactory) getEFactoryInstance();
 	}
@@ -333,6 +342,7 @@ public class MetaSDLProjPackageImpl extends EPackageImpl implements MetaSDLProjP
 		createEReference(stateEClass, STATE__NEXTSTATE);
 		createEReference(stateEClass, STATE__INPUT);
 		createEReference(stateEClass, STATE__OUTPUT);
+		createEAttribute(stateEClass, STATE__DESCRIPTION);
 	}
 
 	/**
@@ -417,6 +427,8 @@ public class MetaSDLProjPackageImpl extends EPackageImpl implements MetaSDLProjP
 		initEReference(getState_Output(), this.getSignal(), null, "output", null, 1, 1, State.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getState_Description(), ecorePackage.getEString(), "description", null, 0, 1, State.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -1,0 +1,49 @@
+<html>
+<title>PingPong</title>
+<head>
+<link href='./styles.css' rel='stylesheet'>
+</head>
+<body>
+<h1>System: PingPong</h1>
+<h2>Processes</h2>
+<div class='processes'>
+<div class='process'>
+<h2>pPing</h2>
+<h3>Current state: <span class='active' id='currentStatepPing'>idle</h3>
+<h3>States</h3><div class='states'>
+<div class='state'>
+<div class='state-header'>
+<p class='state-title active' id='idle-running'>State: idle</p><p class='state-description' id='description-idle-running'>(Waiting for start signal)</p></div>
+<button class='state-input' onclick='inputidlestart()'>
+Input signal: start
+</button>
+<p id='output-idle-running' class='state-output'>Output signal: ping</p>
+</div>
+<div class='state'>
+<div class='state-header'>
+<p class='state-title' id='running-running'>State: running<p class='state-description' id='description-running-running'>(Waiting for pong signal)</p></div>
+<button class='state-input' onclick='inputrunningpong()'>
+Input signal: pong
+</button>
+<p id='output-running-running' class='state-output'>Output signal: ping</p>
+</div>
+</div>
+</div>
+<div class='process'>
+<h2>pPong</h2>
+<h3>Current state: <span class='active' id='currentStatepPong'>idle</h3>
+<h3>States</h3><div class='states'>
+<div class='state'>
+<div class='state-header'>
+<p class='state-title active' id='idle-idle'>State: idle</p><p class='state-description' id='description-idle-idle'>(Waiting for ping signal)</p></div>
+<button class='state-input' onclick='inputidleping()'>
+Input signal: ping
+</button>
+<p id='output-idle-idle' class='state-output'>Output signal: pong</p>
+</div>
+</div>
+</div>
+</div>
+<script src='PingPong.js'></script>
+</body>
+</html>

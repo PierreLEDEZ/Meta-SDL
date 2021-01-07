@@ -1,0 +1,44 @@
+.processes {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.process {
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.states {
+    display: flex;
+    justify-content: space-around;
+}
+
+.state {
+    width: 100%;
+    margin: 0.5rem;
+    padding: 1rem;
+    border: 2px solid black;    
+}
+
+.state-header {
+    display: flex;
+    align-items: center;
+}
+
+.state-description {
+    margin-left: 5px;
+}
+
+.state-output {
+    display: none;
+}
+
+.active {
+    color: red;
+    font-size: 1.2rem;
+}
