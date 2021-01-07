@@ -1,27 +1,25 @@
 package com.metasdlproj.usingmodel;
 
-import java.lang.System;
 import java.io.*;
 import org.eclipse.emf.ecore.EPackage;
 import com.metasdlproj.model.metaSDLProj.*;
+import com.metasdlproj.model.metaSDLProj.System;
 import com.metasdlproj.model.metaSDLProj.util.*;
 
 public class UsingMetaSDLProj {
+	
+	
 
 	public static void main(String[] args) {
-		EPackage.Registry.INSTANCE.put(MetaSDLProjPackage.eNS_URI, MetaSDLProjPackage.eINSTANCE);
 		MetaSDLProjFactory factory = MetaSDLProjFactory.eINSTANCE;
 		
-		com.metasdlproj.model.metaSDLProj.System sys = factory.createSystem();
-		sys.setName("PingPong");
+		SDLModelLoader loader = new SDLModelLoader();
+		String file = "D:\\Programmes\\Eclipse\\workspace\\Meta-SDL\\MetaSDLProj\\model\\System.xmi";
 		
-		Signal sig1 = factory.createSignal();
-		sig1.setName("Sig1");
+		System sys = loader.loadModel( file );
 		
-		sys.getSignals().add(sig1);
-		
-		System.out.println(sys.getName());
-		System.out.println(sys.getSignals().size());
+		java.lang.System.out.println(sys.getName());
+		java.lang.System.out.println(sys.getSignals().get(0).getName());
 		
 
 	}

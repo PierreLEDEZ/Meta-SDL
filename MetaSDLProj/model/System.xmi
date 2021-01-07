@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metaSDLProj:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:metaSDLProj="http://www.example.org/metaSDLProj" xsi:schemaLocation="http://www.example.org/metaSDLProj metaSDLProj.ecore"/>
+<metaSDLProj:System
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:metaSDLProj="http://www.example.org/metaSDLProj"
+    xsi:schemaLocation="http://www.example.org/metaSDLProj metaSDLProj.ecore"
+    name="test">
+  <processes
+      name="testProcess"/>
+  <channels
+      name="A">
+    <from name="env"/>
+    <to name="testProcess"/>
+    <signal
+        name="s"/>
+  </channels>
+  <channels
+      name="B">
+    <from name="testProcess"/>
+    <to name="env"/>
+    <signal
+        name="t"/>
+  </channels>
+  <signals name="s"/>
+  <signals name="t"/>
+</metaSDLProj:System>

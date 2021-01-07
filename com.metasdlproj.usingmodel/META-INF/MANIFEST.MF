@@ -7,5 +7,9 @@ Bundle-Vendor: METASDLPROJ
 Automatic-Module-Name: com.metasdlproj.usingmodel
 Bundle-RequiredExecutionEnvironment: JavaSE-14
 Import-Package: com.metasdlproj.model.metaSDLProj,
+ com.metasdlproj.model.metaSDLProj.util,
  org.eclipse.emf.common,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.edit.domain
+Require-Bundle: org.eclipse.emf.common,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.16.0"
