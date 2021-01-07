@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated metaSDLProj -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.metasdlproj.model.metaSDLProj.presentation.MetaSDLProjModelWizardID"
+            name="%_UI_MetaSDLProjModelWizard_label"
+            class="com.metasdlproj.model.metaSDLProj.presentation.MetaSDLProjModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MetaSDLProjModelFile.gif">
+         <description>%_UI_MetaSDLProjModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated metaSDLProj -->
+      <editor
+            id="com.metasdlproj.model.metaSDLProj.presentation.MetaSDLProjEditorID"
+            name="%_UI_MetaSDLProjEditor_label"
+            icon="icons/full/obj16/MetaSDLProjModelFile.gif"
+            extensions="metasdlproj"
+            class="com.metasdlproj.model.metaSDLProj.presentation.MetaSDLProjEditor"
+            contributorClass="com.metasdlproj.model.metaSDLProj.presentation.MetaSDLProjActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

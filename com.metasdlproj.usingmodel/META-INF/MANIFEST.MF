@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Usingmodel
+Bundle-SymbolicName: com.metasdlproj.usingmodel
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: METASDLPROJ
+Automatic-Module-Name: com.metasdlproj.usingmodel
+Bundle-RequiredExecutionEnvironment: JavaSE-14
+Import-Package: com.metasdlproj.model.metaSDLProj,
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore
