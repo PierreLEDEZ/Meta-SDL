@@ -7,7 +7,24 @@
     xsi:schemaLocation="http://www.example.org/metaSDLProj metaSDLProj.ecore"
     name="test">
   <processes
-      name="testProcess"/>
+      name="testProcess">
+    <states
+        name="idle"
+        nextstate="//@processes.0/@states.1">
+      <input
+          name="s"/>
+      <output
+          name="t"/>
+    </states>
+    <states
+        name="run"
+        nextstate="//@processes.0/@states.0">
+      <input
+          name="s"/>
+      <output
+          name="t"/>
+    </states>
+  </processes>
   <channels
       name="A">
     <from name="env"/>

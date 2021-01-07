@@ -14,13 +14,12 @@ public class UsingMetaSDLProj {
 		MetaSDLProjFactory factory = MetaSDLProjFactory.eINSTANCE;
 		
 		SDLModelLoader loader = new SDLModelLoader();
+		SDLModelPrinter printer = new SDLModelPrinter();
 		String file = "D:\\Programmes\\Eclipse\\workspace\\Meta-SDL\\MetaSDLProj\\model\\System.xmi";
 		
 		System sys = loader.loadModel( file );
 		
-		java.lang.System.out.println(sys.getName());
-		java.lang.System.out.println(sys.getSignals().get(0).getName());
-		
+		java.lang.System.out.println(printer.doSwitch(sys));
 
 	}
 
