@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:metaSDLProj="http://www.example.org/metaSDLProj"
     xsi:schemaLocation="http://www.example.org/metaSDLProj metaSDLProj.ecore"
-    name="test">
+    name="System">
   <processes
       name="testProcess">
     <states
