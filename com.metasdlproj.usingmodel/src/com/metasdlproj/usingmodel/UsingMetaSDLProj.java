@@ -17,9 +17,12 @@ public class UsingMetaSDLProj {
 		SDLModelHTML htmlPrinter = new SDLModelHTML();
 		SDLModelJavaScript jsPrinter = new SDLModelJavaScript();
 		SDLModelPrinter printer = new SDLModelPrinter();
+
+		//=== Adapt this 3 paths with correct ones ===
 		String file = "D:\\Programmes\\Eclipse\\workspace\\Meta-SDL\\MetaSDLProj\\model\\PingPong.xmi";
 		String html_output = "D:\\Programmes\\Eclipse\\workspace\\Meta-SDL\\MetaSDLProj\\model\\PingPong.html";
 		String js_output = "D:\\Programmes\\Eclipse\\workspace\\Meta-SDL\\MetaSDLProj\\model\\PingPong.js";
+		//============================================
 		
 		System sys = loader.loadModel( file );
 		
